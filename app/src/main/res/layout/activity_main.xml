@@ -6,4 +6,5 @@
     android:layout_height="match_parent"
     tools:context="awiidev.gdggulu.com.goafrican_uganda.DishFragment"
     tools:layout="@android:layout/list_content"
-    android:background="#ff6e9aff" />
+    android:background="#ff0ea1fe"
+    />

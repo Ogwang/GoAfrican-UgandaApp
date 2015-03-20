@@ -26,7 +26,7 @@
             android:name=".AddDish"
             android:label="@string/title_activity_add_dish"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/CustomActionBarTheme" >
+             >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="awiidev.gdggulu.com.goafrican_uganda.MainActivity" />
@@ -78,7 +78,8 @@
         </activity>
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings" >
+            android:label="@string/title_activity_settings"
+            android:theme="@style/CardView.Light">
         </activity>
     </application>
 

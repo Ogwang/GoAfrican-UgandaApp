@@ -93,7 +93,7 @@ public class AddDish extends ActionBarActivity {
                 String steps = esteps.getText().toString();
 
                 if (title.equals("") && description.equals("") && ingredients.equals("") && steps.equals("") ) {
-                    Toast.makeText(getActivity(), "Please fill the form.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), "Please fill the required details. Thank you.", Toast.LENGTH_LONG).show();
 
                 } else {
                     StoreDishTask storeDishTask = new StoreDishTask();
@@ -102,7 +102,7 @@ public class AddDish extends ActionBarActivity {
                     edescription.setText("");
                     eingredients.setText("");
                     esteps.setText("");
-                    Toast.makeText(getActivity(), "Your dish has been Successfully added.Thank you", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), "Thank You! Your dish has been Successfully Submitted", Toast.LENGTH_LONG).show();
 
                 }
             }
@@ -110,7 +110,6 @@ public class AddDish extends ActionBarActivity {
 
         public class StoreDishTask extends AsyncTask<Void, Void, Void> {
             private MyApi dishApiService = null;
-
             @Override
             protected Void doInBackground(Void... params) {
                 if (dishApiService == null) {
@@ -148,5 +147,6 @@ public class AddDish extends ActionBarActivity {
             }
 
         }
+
     }
 }

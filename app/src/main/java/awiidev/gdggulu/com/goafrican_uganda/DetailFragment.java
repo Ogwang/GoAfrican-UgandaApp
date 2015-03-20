@@ -44,7 +44,7 @@ import awiidev.gdggulu.com.goafrican_uganda.data.DishContract;
  */
 public class DetailFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor>{
 
-    private  static final String DISH_SHARE_HASHTAG = "#GoAfrican-Uganda Dishes";
+    private  static final String DISH_SHARE_HASHTAG = "#GoAfrican-Ugandan Dishes";
     public static final String DISH_KEY = "dishName";
     private String dish;
     private String dishStr;

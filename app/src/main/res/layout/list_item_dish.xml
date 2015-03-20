@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center_vertical"
-    android:minHeight="?android:attr/listPreferredItemHeight"
     android:orientation="horizontal"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardElevation="7.5sp"
+    card_view:cardBackgroundColor="@color/colorPrimaryDark"
     android:padding="16dp"
-    android:background="#ff0b9914">
-
+    >
+<LinearLayout
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/touch_selector">
     <ImageView
         android:id="@+id/list_item_icon"
         android:layout_width="wrap_content"
@@ -15,11 +20,10 @@
         android:src="@drawable/dc" />
 
     <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="0dp"
-        android:layout_weight="1"
         android:orientation="vertical"
-        android:paddingLeft="16dp">
+    >
 
         <TextView
             android:id="@+id/list_view_dish_title"
@@ -39,12 +43,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Trad Dish"
-            android:textColor="#fffe3f23"
+            android:textColor="#ffffffff"
             android:textSize="14dp"
             android:textStyle="bold|italic"
             android:typeface="sans"
             android:layout_gravity="bottom|left" />
 
     </LinearLayout>
-
 </LinearLayout>
+
+</android.support.v7.widget.CardView>

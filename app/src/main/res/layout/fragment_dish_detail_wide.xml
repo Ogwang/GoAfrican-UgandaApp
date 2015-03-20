@@ -1,8 +1,20 @@
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
+
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardElevation="7.5sp"
+        card_view:cardBackgroundColor="#ff0ea1fe"   >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -11,10 +23,10 @@
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:paddingTop="@dimen/activity_vertical_margin"
             android:paddingBottom="@dimen/activity_vertical_margin"
-            >
+            android:background="#ff0ea1fe">
             <ImageView
                 android:contentDescription="Dish"
-                android:background="@mipmap/food"
+                android:background="@drawable/food"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <LinearLayout
@@ -25,7 +37,7 @@
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
                 android:paddingBottom="@dimen/activity_vertical_margin"
-                android:background="#ff0b9914">
+                android:background="#ff0ea1fe">
 
                 <TextView
                     android:id="@+id/detail_title"
@@ -97,19 +109,6 @@
                     android:background="@android:color/darker_gray"
                     />
 
-                <!--Button
-                android:id="@+id/showReviews"
-                android:text="REVIEWS"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                />
-                    <View
-                        android:layout_width="fill_parent"
-                        android:layout_height="2dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="@android:color/darker_gray"
-                        /-->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -176,27 +175,29 @@
                         android:text="Your Name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="#fffbfff6"
+                        android:textColor="#ffffffff"
                         android:textSize="24sp"/>
                     <EditText
                         android:id="@+id/usernameEdit"
                         android:inputType="text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#ffffffff" />
+                        android:hint="Your Name(eg. Ogwang Denis)"
+                        android:textColor="#d9090409"/>
 
                     <TextView
                         android:text="Review"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="#fffbfff6"
+                        android:textColor="#ffffffff"
                         android:textSize="24sp"/>
                     <EditText
                         android:id="@+id/reviewEdit"
                         android:inputType="textMultiLine"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#fffafff9" />
+                        android:hint="Write Your Review Here"
+                        android:textColor="#d9090409"/>
 
                     <Button
                         android:id="@+id/addReviewBtn"
@@ -205,10 +206,11 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="#fffe3f23"
+
                         android:textColor="#ffffffff" />
 
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>`
+    </android.support.v7.widget.CardView>
 </ScrollView>
