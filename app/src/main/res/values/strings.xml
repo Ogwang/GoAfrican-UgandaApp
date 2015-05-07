@@ -8,6 +8,9 @@
     <string name="action_share">Share</string>
     <string name="action_reviews">Reviews</string>
 
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">Close drawer</string>
+
     <!-- SyncAdapter related -->
     <string name="sync_account_type">awiidev.gdggulu.goafrican.com</string>
     <string name="content_authority">com.awiidev.gdggulu.goafrican_uganda</string>
@@ -32,4 +35,12 @@
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_dish_detail">Dish Details</string>
+    <string name="title_activity_index">GoAfrican-Uganda</string>
+    <string name="title_activity_home">GoAfrican-Uganda</string>
+
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_dashboard">GoAfrican-Uganda</string>
 </resources>

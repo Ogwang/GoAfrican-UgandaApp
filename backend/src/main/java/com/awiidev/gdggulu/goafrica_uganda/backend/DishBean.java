@@ -10,8 +10,7 @@ public class DishBean {
     String description;
     String ingredients;
     String steps;
-//     String photo;
-//    String videoUrl;
+
 
 
     public Long getId() {
@@ -48,21 +47,7 @@ public class DishBean {
         this.steps = steps;
     }
 
-//    public String getPhoto() {
-//        return photo;
-//    }
-//
-//    public void setPhoto(String photo) {
-//        this.photo = photo;
-//    }
-//
-//    public String getVideoUrl() {
-//        return videoUrl;
-//    }
-//
-//    public void setVideoUrl(String videoUrl) {
-//        this.videoUrl = videoUrl;
-//    }
+
 
 
 }

@@ -1,0 +1,9 @@
+
+<resources>
+    <color name="colorPrimary">#fffe4b1c</color>
+    <color name="colorPrimaryDark">#ff0ea1fe</color>
+    <color name="accent">#ffc400</color>
+    <color name="textColorPrimary">#d9090409</color>
+    <color name="windowBackgroundColor">#fff8ffa5</color>
+    <color name="black_translucent">#fff8ffa5</color>
+</resources>

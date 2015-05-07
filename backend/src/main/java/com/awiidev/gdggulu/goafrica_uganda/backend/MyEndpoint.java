@@ -38,8 +38,6 @@ public class MyEndpoint {
             dishEntity.setProperty("description", dishBean.getDescription());
             dishEntity.setProperty("ingredients", dishBean.getIngredients());
             dishEntity.setProperty("steps", dishBean.getSteps());
-//            dishEntity.setProperty("photo", dishBean.getPhoto());
-//            dishEntity.setProperty("videoUrl", dishBean.getVideoUrl());
             datastoreService.put(dishEntity);
             txn.commit();
         } finally {
@@ -65,8 +63,7 @@ public class MyEndpoint {
             dishBean.setDescription((String) result.getProperty("description"));
             dishBean.setIngredients((String) result.getProperty("ingredients"));
             dishBean.setSteps((String) result.getProperty("steps"));
-//            dishBean.setPhoto((String) result.getProperty("photo"));
-//            dishBean.setVideoUrl((String) result.getProperty("videoUrl"));
+
             dishBeans.add(dishBean);
         }
         return dishBeans;
@@ -124,23 +121,11 @@ public class MyEndpoint {
         DatastoreService datastoreService = DatastoreServiceFactory.getDatastoreService();
         Key reviewBeanParentKey = KeyFactory.createKey("ReviewBeanParent", "DishAfrica");
 
-//        Query query = new Query(reviewBeanParentKey);
-//        // Use PreparedQuery interface to retrieve results
-//        PreparedQuery pq = datastore.prepare(query);
-//
-//
-//        for (Entity result : pq.asIterable()) {
-//            String firstName = (String) result.getProperty("firstName");
-//            String lastName = (String) result.getProperty("lastName");
-//            Long height = (Long) result.getProperty("height");
-//
-//            System.out.println(firstName + " " + lastName + ", " + height + " inches tall");
-//        }
+
         Query.Filter propertyFilter =
                 new Query.FilterPredicate("dishId",
                         Query.FilterOperator.EQUAL,
                         dishId);
-//        Query q = new Query("Person").setFilter(propertyFilter);
         Query query = new Query("ReviewBean").setFilter(propertyFilter);
         List<Entity> results = datastoreService.prepare(query).asList(FetchOptions.Builder.withDefaults());
 
@@ -161,16 +146,13 @@ public class MyEndpoint {
     public List<DishBean> searchDishes(@com.google.api.server.spi.config.Named("searchTerm") String searchTerm) {
         DatastoreService datastoreService = DatastoreServiceFactory.getDatastoreService();
         Key dishBeanParentKey = KeyFactory.createKey("DishBeanParent", "DishAfrica");
-//        Query query = new Query("Customer");
+
         Query.Filter propertyFilter =
                 new Query.FilterPredicate("title",
                         Query.FilterOperator.EQUAL,
                         searchTerm);
-//        Query q = new Query("Person").setFilter(propertyFilter);
+
         Query query = new Query("DishBean").setFilter(propertyFilter);
-//        query.addFilter("title", Query.FilterOperator.EQUAL, searchTerm);
-//        PreparedQuery pq = datastoreService.prepare(query);
-//        Entity dish = pq.asSingleEntity();
 
         List<Entity> results = datastoreService.prepare(query).asList(FetchOptions.Builder.withDefaults());
 
@@ -182,8 +164,6 @@ public class MyEndpoint {
             dishBean.setDescription((String) result.getProperty("description"));
             dishBean.setIngredients((String) result.getProperty("ingredients"));
             dishBean.setSteps((String) result.getProperty("steps"));
-//            dishBean.setPhoto((String) result.getProperty("photo"));
-//            dishBean.setVideoUrl((String) result.getProperty("videoUrl"));
             dishBeans.add(dishBean);
         }
         return dishBeans;
